@@ -51,7 +51,7 @@ CREATE TABLE DRIVER(
 license_no VARCHAR(18), 
 name VARCHAR(20), 
 clearence_level ENUM('1','2','3','4'), 
-languages BLOB(20), 
+languages BLOB, 
 PRIMARY KEY(license_no)
 );
 
@@ -60,14 +60,14 @@ PRIMARY KEY(license_no)
 
 CREATE TABLE MAINTANANCE_REPAIR(
 invoice_no INT AUTO_INCREMENT NOT NULL, 
-vehicle VARCHAR(20), 
+vehicle_vin VARCHAR(20), 
 current_odo INT NOT NULL, 
 date DATE, 
 cost DOUBLE, 
 description TEXT, 
 nature ENUM('R','M'), 
 PRIMARY KEY(invoice_no), 
-FOREIGN KEY(vehicle) REFERENCES VEHICLE(vin)
+FOREIGN KEY(vehicle_vin) REFERENCES VEHICLE(vin)
 ); 
 
 ---------------------------------------------
