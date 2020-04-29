@@ -51,7 +51,8 @@ CREATE TABLE DRIVER(
 license_no VARCHAR(18), 
 name VARCHAR(20), 
 clearence_level ENUM('1','2','3','4'), 
-languages BLOB, 
+languages VARCHAR(25), 
+travelled_kms INT,
 PRIMARY KEY(license_no)
 );
 

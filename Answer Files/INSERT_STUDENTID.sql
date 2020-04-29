@@ -23,7 +23,8 @@ INSERT INTO OFFICIAL_ROLE(official_id, role) VALUES ('HDCH1','Head Coach'),
 ('JDG1','Judge'),
 ('PHY1','Physician'),
 ('JDG2','Judge'),
-('ASSCH1','Assistant Coach');
+('ASSCH1','Assistant Coach'),
+('ASSCH2','Assistant Coach');
 
 ---------------------------------------------
 
@@ -35,11 +36,11 @@ INSERT INTO VEHICLE(vin, registration, make, model, color, current_odo, pssngr_c
 ('BSHRAN133H8678QOED', '973 OML', 'Audi', 'A1', 'Grey', 7761, 3, 'YES');
 
 
-INSERT INTO DRIVER(license_no, name, clearence_level, languages) VALUES ('1029384756QPWOEIRU', 'Joe Noel', '1', 'EN HY BA'),
-('5987654321QPWOEIRU', 'Pitt Grey', '2', 'EN HI DE'),
-('890QPWOEIRU7654321', 'Brad Jey', '3', 'FR ZH EN'),
-('110QPWOEIRU765TREW', 'Mike Payoe', '4', 'EN DE FR ZH'),
-('832190QP765WOEIRU4', 'Richie Mel', '1', 'EN');
+INSERT INTO DRIVER(license_no, name, clearence_level, languages, travelled_kms) VALUES ('1029384756QPWOEIRU', 'Joe Noel', '1', 'EN HY BA',700),
+('5987654321QPWOEIRU', 'Pitt Grey', '2', 'EN HI DE',2500),
+('890QPWOEIRU7654321', 'Brad Jey', '3', 'FR ZH EN',5000),
+('110QPWOEIRU765TREW', 'Mike Payoe', '4', 'EN DE FR ZH',10000),
+('832190QP765WOEIRU4', 'Richie Mel', '1', 'EN',950);
 
 ---------------------------------------------
 
@@ -57,7 +58,8 @@ INSERT INTO OFFICIAL(official, country, name, preffered_lng, usage_1) VALUES ('H
 ('JDG1','CN','Don Ruksh', 'ZH','8hrs'),
 ('PHY1','FR','Prathap Costa', 'FR','7.5hrs'),
 ('JDG2','DE','Rose Miller', 'DE','1hr 25 minutes'),
-('ASSCH1','IN','Joey Tribbiani', 'HI','12hrs');
+('ASSCH1','IN','Joey Tribbiani', 'HI','12hrs'),
+('ASSCH2','US','Chandler Bing', 'EN','5hrs');
 
 
 INSERT INTO LOCATION(location, start_streetNo, start_streetName, start_suburb, start_state, start_postalCode, end_streetNo, end_streetName, end_suburb, end_state, end_postalCode) VALUES (1, '23D', '1st Lane', 'Gracius', 'Arizona', '1432H','4','Temple Road','Reeves','Arizona','1476J'),
