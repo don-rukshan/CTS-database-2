@@ -53,10 +53,54 @@ INSERT INTO MAINTANANCE_REPAIR(vehicle_vin, current_odo, date, cost, description
 ---------------------------------------------
 
 
+INSERT INTO OFFICIAL(official, country, name, preffered_lng, usage_1) VALUES ('HDCH1','AU','Jake boi', 'EN','2hrs'),
+('JDG1','CN','Don Ruksh', 'ZH','8hrs'),
+('PHY1','FR','Prathap Costa', 'FR','7.5hrs'),
+('JDG2','DE','Rose Miller', 'DE','1hr 25 minutes'),
+('ASSCH1','IN','Joey Tribbiani', 'HI','12hrs');
 
 
+INSERT INTO LOCATION(location, start_streetNo, start_streetName, start_suburb, start_state, start_postalCode, end_streetNo, end_streetName, end_suburb, end_state, end_postalCode) VALUES (1, '23D', '1st Lane', 'Gracius', 'Arizona', '1432H','4','Temple Road','Reeves','Arizona','1476J'),
+(2, '23D', '1st Lane', 'Gracius', 'Arizona', '1432H','42','Mall Street','Kelly','Arizona','1486A'),
+(3, '23D', '1st Lane', 'Gracius', 'Arizona', '1432H','4','Temple Road','Reeves','Arizona','1476J'),
+(4, '1', 'Airport Road', 'texie', 'Arizona', '11165','23D', '1st Lane', 'Gracius', 'Arizona', '1432H'),
+(5, '24/1A', 'Main Street', 'Gracius', 'Arizona', '1412H','23D', '1st Lane', 'Gracius', 'Arizona', '1432A');
 
 
+INSERT INTO COUNTRY_LANGUAGE(country, language) VALUES ('AU','EN'),
+('CN','ZH'),
+('CN','EN'),
+('FR','FR'),
+('FR','EN'),
+('DE','DE'),
+('DE','FR'),
+('DE','EN'),
+('IN','HI'),
+('IN','EN');
 
+
+INSERT INTO DRIVER_LANGUAGE(driver_no, language) VALUES ('1029384756QPWOEIRU','EN')
+('1029384756QPWOEIRU','HY'),
+('1029384756QPWOEIRU','BA'),
+('5987654321QPWOEIRU','EN'),
+('5987654321QPWOEIRU','HI'),
+('5987654321QPWOEIRU','DE'),
+('890QPWOEIRU7654321','FR'),
+('890QPWOEIRU7654321','ZH'),
+('890QPWOEIRU7654321','EN'),
+('110QPWOEIRU765TREW','EN'),
+('110QPWOEIRU765TREW','DE'),
+('110QPWOEIRU765TREW','FR'),
+('110QPWOEIRU765TREW','ZH'),
+('832190QP765WOEIRU4','EN');
+
+---------------------------------------------
+
+
+INSERT INTO TRIP(reference, official, vehicle, driver_no, start_datetime, end_datetime, location_id) VALUES ('ABC1','HDCH1', 'BSHRAN133H8678QOED','832190QP765WOEIRU4','2020-07-03 08:30', '2020-07-03 10:30',1),
+('QWE1','JDG1', 'HONDAN33345678GANB','110QPWOEIRU765TREW','2020-07-03 08:30', '2020-07-03 16:30',2),
+('CDE2','PHY1', 'SANBAN12345678BAMB','890QPWOEIRU7654321','2020-07-04 08:30', '2020-07-04 16:00',3),
+('ABC2','JDG2', 'FORDAN59105678TORH','5987654321QPWOEIRU','2020-07-04 08:30', '2020-07-04 10:00',4),
+('NGC1','ASSCH1','HONDAN33345678GANB','5987654321QPWOEIRU','2020-07-08 08:30', '2020-07-08 20:30',5);
 
 
