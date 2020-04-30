@@ -11,7 +11,7 @@ WHERE start_streetName like '% %d' OR end_streetName like'% %d';
 
 
 3. 
-Country & Language in English >>>
+Country & Language in Understandable English >>>
 
 SELECT OFFICIAL.name, COUNTRY.country, LANGUAGE.language 
 FROM OFFICIAL 
@@ -19,7 +19,7 @@ INNER JOIN COUNTRY on COUNTRY.cn_code = OFFICIAL.country
 INNER JOIN LANGUAGE on LANGUAGE.ln_code = OFFICIAL.preffered_lng
 ORDER BY OFFICIAL.name;
 
-Country & Language in ISO form >>>>
+Country & Language in ISO format >>>>
 
 SELECT name, country, preffered_lng
 FROM OFFICIAL
@@ -52,7 +52,7 @@ HAVING cost > avg(cost) IN (select avg(cost) from maintanance_repair WHERE natur
 SELECT OFFICIAL.name, OFFICIAL_ROLE.role
 FROM OFFICIAL_ROLE
 INNER JOIN OFFICIAL on OFFICIAL.official = OFFICIAL_ROLE.official_id
-WHERE NOT EXISTS (SELECT * FROM TRIP WHERE OFFICIAL_ROLE.official_id = TRIP.official)
+WHERE NOT EXISTS (SELECT * FROM TRIP WHERE OFFICIAL_ROLE.official_id = TRIP.official);
 
 
 8.
@@ -60,7 +60,7 @@ SELECT vehicle_vin, sum(cost) as total , nature
 FROM MAINTANANCE_REPAIR
 GROUP BY vehicle_vin,nature
 ORDER BY total DESC
-LIMIT 2
+LIMIT 2;
 
 
 
